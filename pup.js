@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 const authenticate = async () => {
     // Launch the browser and open a new blank page
     const browser = await puppeteer.launch({
-         headless: 'old',
+         headless: 'new',
         args: [
             "--no-sandbox",
             "--disable-gpu",

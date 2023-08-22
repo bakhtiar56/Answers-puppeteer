@@ -22,13 +22,7 @@ const authenticate = async () => {
 
     const ss = await page.screenshot({ path: "screenshot.png" }); // Take screenshot of the page
 
-
-
-
-
     await page.close();
-
-
 
     await browser.close();
 };

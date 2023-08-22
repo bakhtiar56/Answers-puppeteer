@@ -19,12 +19,11 @@ const authenticate = async () => {
     await page.type("#login_field", username)
     await page.type("#password", password)
     await page.click("[type=submit]") // Click on submit button
-    new Promise(r => setTimeout(r, 2000));
-
-    const ss = await page.screenshot({ path: "screenshot.png" }); // Take screenshot of the page
+    
+    new Promise(r => setTimeout(r, 2000)); // Wait for 2 seconds
+    await page.screenshot({ path: "screenshot.png" }); // Take screenshot of the page
 
     await page.close();
-
     await browser.close();
 };
 
